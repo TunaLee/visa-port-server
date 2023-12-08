@@ -20,9 +20,9 @@ class Visa(Model,
            VisaViewMixin,
            VisaRenewalMixin
            ):
-    code = models.ForeignKey(VisaCode, related_name='visas', on_delete=models.SET_NULL)
-    user = models.ForeignKey('users.User', related_name='visas', on_delete=models.SET_NULL)
-    nationality = models.ForeignKey('nationalitys.Nationality', related_name='visas', on_delete=models.SET_NULL)
+    code = models.ForeignKey(VisaCode, related_name='visas', on_delete=models.SET_NULL, null=True, blank=True)
+    user = models.ForeignKey('users.User', related_name='visas', on_delete=models.SET_NULL, null=True, blank=True)
+    nationality = models.ForeignKey('nationalities.Nationality', related_name='visas', on_delete=models.SET_NULL, null=True, blank=True)
 
     passport_no = models.TextField(primary_key=True, verbose_name=_('여권 번호'))
     expiration_date = models.DateField(_('비자 만료일'))
