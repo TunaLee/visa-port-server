@@ -37,6 +37,6 @@ class User(AbstractUser,
 
     def save(self, *args, **kwargs):
         # Update related objects
-        self.posts.exclude(user_email=self.email).update(user_email=self.email)
+        # self.posts.exclude(user_email=self.email).update(user_email=self.email)
 
         super(User, self).save(*args, **kwargs)

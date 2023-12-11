@@ -1,11 +1,11 @@
 from django.contrib import admin
 
-from visa_port.apps.app_templates.models.index import Template
+from visa_port.apps.nationalities.models import Nationality
 from visa_port.bases.admin import Admin
 
 
-@admin.register(Template)
-class TemplateView(Admin):
+@admin.register(Nationality)
+class NationalityView(Admin):
     list_display = ('',)
     search_fields = ('',)
     readonly_fields = ('',)

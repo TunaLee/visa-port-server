@@ -6,7 +6,7 @@ class VisaViewMixin(models.Model):
     # Operation Manager Permission
     recent_view_date = models.DateField(_('비자 최근 조회일'), null=True, blank=True)
 
-    expiration_view = models.ForeignKey('views.ExpirationView', null=True)
+    expiration_view = models.ForeignKey('views.ExpirationView', null=True, on_delete=models.SET_NULL)
 
     class Meta:
         abstract = True

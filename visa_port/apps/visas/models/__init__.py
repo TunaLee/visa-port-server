@@ -1,1 +1,1 @@
-from visa_port.apps.app_templates.models.index import PostVideoView, ClubView, PostView
+from visa_port.apps.visas.models.index import Visa, VisaCode

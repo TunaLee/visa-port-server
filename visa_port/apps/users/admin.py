@@ -11,7 +11,7 @@ from visa_port.bases.admin import Admin
 
 @admin.register(User)
 class UserAdmin(Admin, UserAdmin):
-    list_display = ('profile_image_tag', 'email', 'username', 'phone', 'auth_token', 'is_staff')
+    list_display = ('profile_image_tag', 'email', 'username', 'phone')
     search_fields = ('email', 'username', 'phone')
     list_filter = ()
     ordering = ('-created',)
@@ -36,4 +36,4 @@ class UserAdmin(Admin, UserAdmin):
         ('4. 생성일 / 수정일', {'fields': ('created', 'modified',)}),
     )
 
-    readonly_fields = ('auth_token', "created", "modified", 'profile_image_tag', 'profile_image_url')
+    readonly_fields = ("created", "modified")

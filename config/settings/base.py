@@ -102,6 +102,8 @@ ROOT_URLCONF = "config.urls"
 # https://docs.djangoproject.com/en/dev/ref/settings/#wsgi-application
 WSGI_APPLICATION = "config.wsgi.application"
 
+HI_KOREA_URL = env("HI_KOREA_URL")
+
 # APPS
 # ------------------------------------------------------------------------------
 DJANGO_APPS = [
@@ -159,8 +161,10 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    "visa_port.apps.app_templates.apps.ViewsConfig",
+    "visa_port.apps.views.apps.ViewsConfig",
     "visa_port.apps.users.apps.UsersConfig",
+    "visa_port.apps.visas.apps.VisaConfig",
+    "visa_port.apps.nationalities.apps.NationalitiesConfig",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

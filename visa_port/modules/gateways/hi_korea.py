@@ -7,7 +7,6 @@ from django.conf import settings
 # Local
 from visa_port.bases.modules.gateways import Gateway as BaseGateway
 
-
 class HiKoreaGateway(BaseGateway):
     def __init__(self):
         super().__init__(base_url=urljoin(settings.HI_KOREA_URL, "/"))
