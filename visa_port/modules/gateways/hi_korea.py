@@ -15,9 +15,9 @@ class HiKoreaGateway(BaseGateway):
         path = 'info/CheckExprYmdByPassNoResult.pt'
 
         payload = {
-            'passNo': data.get('pass_no'),
-            'natCd': data.get('nat_cd'),
-            'birthYmd': data.get('birth_ymd')
+            'passNo': data.get('passport_no'),
+            'natCd': data.get('nationality_code'),
+            'birthYmd': data.get('birth_date')
         }
 
         print('body : ', payload)

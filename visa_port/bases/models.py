@@ -31,7 +31,7 @@ class UpdateMixin(object):
         self.save(update_fields=kwargs.keys())
 
 
-class ㅇModel(UpdateMixin, StatusModel, TimeStampedModel, models.Model):
+class Model(UpdateMixin, StatusModel, TimeStampedModel, models.Model):
 
     STATUS = Choices(("", ""))
     status = StatusField(_("status"), null=True, blank=True)
