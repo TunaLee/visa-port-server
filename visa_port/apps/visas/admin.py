@@ -6,14 +6,13 @@ from visa_port.bases.admin import Admin
 
 @admin.register(VisaCode)
 class VisaCodeView(Admin):
-    list_display = ('',)
-    search_fields = ('',)
-    readonly_fields = ('',)
+    list_display = ('name', 'description')
+    search_fields = ('name', 'description')
 
     fieldsets = (
-        ("정보", {"fields": ('',)}),
+        ("정보", {"fields": ('name', 'description')}),
     )
 
     add_fieldsets = (
-        ("정보", {"fields": ('',)}),
+        ("정보", {"fields": ('name', 'description')}),
     )

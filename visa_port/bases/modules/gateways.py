@@ -25,4 +25,4 @@ class Gateway:
         # Raise exception for HTTP error status codes such as 400, 404, 500.
         # response.raise_for_status()
 
-        return response.json()
+        return response
